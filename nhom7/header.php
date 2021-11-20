@@ -89,9 +89,9 @@ $protype = new Protype;
 								
 									<form method="get" action="result.php">
 									<select class="input-select">
-										<option value="0">name</option>
-										<option value="1">Description</option>
-										<option value="1">Price</option>
+										<option  value="0">name</option>
+										<option  value="1">Description</option>
+										<option  value="1">Price</option>
 									</select>
 									<input name="keywork" class="input" placeholder="Search here">
 									<button type="submit" class="search-btn">Search</button>
@@ -196,11 +196,13 @@ $protype = new Protype;
 						<li> <a href="products.php?type_id=<?php echo $value['type_id'] ?> "><?php echo $value['type_name'] ?></a></li>
 						
 						<?php endforeach; ?>
-						<li><a href="#">Categories</a></li>
+						<!-- 
+							<li><a href="#">Categories</a></li>
 						<li><a href="#">Laptops</a></li>
 						<li><a href="#">Smartphones</a></li>
 						<li><a href="#">Cameras</a></li>
-						<li><a href="#">Accessories</a></li>
+						<li><a href="#">Accessories</a></li> 
+						-->
 						
 					</ul>
 					<!-- /NAV -->
