@@ -8,14 +8,7 @@ require "models/protype.php";
 ?>
 
 <?php
-$protype = new Protype();
-$getProtype = $protype->getAllProtype();
 
-foreach($getProtype as $value)
-{
-  echo $value['type_name'];
-  echo $value['type_id'];
-} 
 $product= new Product();
 $getAllProduct = $product->getAllProducts();
 ?>
