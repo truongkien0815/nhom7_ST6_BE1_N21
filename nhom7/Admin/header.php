@@ -237,6 +237,12 @@
                   <p>manufacture</p>
                 </a>
               </li>
+              <li class="nav-item">
+                <a href="./addproduct.php" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>ADD product</p>
+                </a>
+              </li>
               
             </ul>
             </li>

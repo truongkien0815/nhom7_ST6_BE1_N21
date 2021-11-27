@@ -2,13 +2,42 @@
 <?php
 class Product extends Db
 {
-public function getAllProducts()
-{
+    public function updateProduct($id,$name,$price,$image,$protype,$manu)
+    {
+        $sql = self::$connection->prepare("UPDATE `products` SET `name` =?,
+         `manu_id`= ?, `type_id`= ?, `price`=?, `image`= ? 
+         Where `id`= ? ");
+           
+         $sql->bind_param("isisiii",$id,$name,$price,$image,$protype,$manu);
+        return $sql->execute();
+    }
+    public function delProduct($id)
+    {
+        $sql = self::$connection->prepare("delete from products
+         where id = ?");
+    // kiểm tra id này có phải số nguyên hay khôbng nếu là số nguyên thì truyền vào id 
+    $sql->bind_param("i",$id);
+    
+    return $sql->execute(); //return an array
+    }
+    public function addProduct($name,$manu,$manu_id,$price,$image,$desc)
+    {
+        $sql = self::$connection->prepare("insert into products( `name`, `manu_id`, `type_id`, `price`, `image`, `description`)
+         values(?,?,?,?,?,?)");
+    // kiểm tra id này có phải số nguyên hay khôbng nếu là số nguyên thì truyền vào id 
+    $sql->bind_param("siiiss",$name,$manu,$manu_id,$price,$image,$desc);
+    
+    return $sql->execute(); //return an array
+    }
+    public function getAllProducts()
+    {
     $sql = self::$connection->prepare("SELECT * FROM products
     ,manufactures,protypes 
     where products.manu_id = manufactures.manu_id
     and products.type_id = protypes.type_id
+    order by id desc
     ");
+    
     // Thực thi câu truy vấn 
     $sql->execute(); //return an object
     $items = array();
