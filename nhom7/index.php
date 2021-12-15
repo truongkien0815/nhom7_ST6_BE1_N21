@@ -114,7 +114,7 @@ include "header.php";
 											</div>
 											<div class="add-to-cart">
 											
-												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> <a href="product.html">add to cart</a></button>
+												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> <a href="product2.php?id=<?php echo $value['id']; ?>">add to cart</a></button>
 											</div>
 										</div>
 										<!-- /product -->

@@ -1,5 +1,6 @@
 
-<?php include "headerproducts.php"; ?>
+<?php //include "headerproducts.php"; ?>
+<?php include "header.php"; ?>
 <?php
 require "models/config.php";
  require "models/db.php";
@@ -57,12 +58,12 @@ $getAllProduct = $product->getAllProducts();
                           ID
                       </th>
                       <th style="width: 20%">
-                          Name
+                          Name Product
                       </th>
-                      <th style="width: 30%">
+                      <th style="width: 25%">
                           Image
                       </th>
-                      <th>
+                      <th style="width:16%">
                           Price
                       </th>
                       <th style="width: 8%" class="text-center">
@@ -91,7 +92,8 @@ $getAllProduct = $product->getAllProducts();
                           <?php echo $value['name']; ?>
                       </td>
                       <td>
-                      <img style="width:50px" src="../img/<?php echo $value['image']; ?>" alt="">
+                   
+                      <img style="width:60px" src="../img/<?php echo $value['image']; ?>" alt="">
                       </td>
                       <td>
                         <div class="project_progress"><?php echo number_format($value['price']) ?> VND</div>
@@ -99,10 +101,10 @@ $getAllProduct = $product->getAllProducts();
                       <td> <?php echo $value['manu_name'] ?></td>
                       <td><?php echo $value['type_name'] ?></td>
                       <td>
-                      <a class="btn btn-primary btn-sm" href="#">
+                      <a class="btn btn-primary btn-sm" href="addproduct.php">
                               <i class="fas fa-folder">
                               </i>
-                              View
+                              Add
                           </a>
                       <a class="btn btn-info btn-sm" href="update.php?id=<?php echo $value['id'] ?>">
                               <i class="fas fa-pencil-alt">
@@ -136,6 +138,6 @@ $getAllProduct = $product->getAllProducts();
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
- 
-  <?php include "footerproducts.html"; ?>
+ <?php include "footer.html";?>
+  <?php //include "footerproducts.html"; ?>
   

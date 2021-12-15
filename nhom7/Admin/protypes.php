@@ -1,5 +1,6 @@
 
-<?php include "headerproducts.php"; ?>
+<?php// include "headerproducts.php"; ?>
+<?php include "header.php"; ?>
 <?php
 require "models/config.php";
  require "models/db.php";
@@ -84,32 +85,33 @@ $getAllProtype = $protype->getAllProtype();
                       </td>
                       <?php
                 //  $value['type_id']=$_GET['id'];
-                  if(isset($_GET['id']))
-                  {
-                    echo "san pham".$value['type_id'];
-                  }
-                  else
-                  {
-                    echo "0";
-                  }
+                 // if(isset($_GET['id']))
+                 // {
+                 //   echo "san pham".$value['type_id'];
+                 // }
+                //  else
+                //  {
+                //    echo "0";
+                //  }
                    ?>
                       
                       
                       
                       <td>
-                      <a class="btn btn-primary btn-sm" href="#">
+                    <a class="btn btn-primary btn-sm" href="addprotype.php">
                               <i class="fas fa-folder">
                               </i>
-                              View
+                              Add
                           </a>
-                      <a class="btn btn-info btn-sm" href="#">
+                      <a class="btn btn-info btn-sm" href="editprotype.php?id=<?php echo $value['type_id']; ?>">
                               <i class="fas fa-pencil-alt">
                               </i>
                               Edit
                           </a>
-                          <a class="btn btn-danger btn-sm" href="#">
+                          <a class="btn btn-danger btn-sm" href="delprotype.php?id=<?php echo $value['type_id'];  ?>">
                               <i class="fas fa-trash">
                               </i>
+                          
                               Delete
                           </a>
                       </td>
@@ -134,6 +136,6 @@ $getAllProtype = $protype->getAllProtype();
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
- 
-  <?php include "footerproducts.html"; ?>
+ <?php include "footer.html"; ?>
+  <?php// include "footerproducts.html"; ?>
   

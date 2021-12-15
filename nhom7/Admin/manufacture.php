@@ -1,5 +1,6 @@
 
-<?php include "headerproducts.php"; ?>
+<?php //include "headerproducts.php"; ?>
+<?php include "header.php"; ?>
 <?php
 require "models/config.php";
  require "models/db.php";
@@ -55,10 +56,10 @@ $getAllmanufacture = $manufacture->getAllmanufacture();
               <thead>
                   <tr>
                       <th style="width: 1%">
-                          type name
+                          manu id
                       </th>
                       <th style="width: 20%">
-                          id type
+                          manu name
                       </th>
                       <th style="width: 30%">
                       Action
@@ -84,17 +85,17 @@ $getAllmanufacture = $manufacture->getAllmanufacture();
                       
                       
                       <td>
-                      <a class="btn btn-primary btn-sm" href="#">
+                      <a class="btn btn-primary btn-sm" href="addmanu.php">
                               <i class="fas fa-folder">
                               </i>
-                              View
+                              Add
                           </a>
-                      <a class="btn btn-info btn-sm" href="#">
+                      <a class="btn btn-info btn-sm" href="editmanu.php?id=<?php echo $value['manu_id']; ?>">
                               <i class="fas fa-pencil-alt">
                               </i>
                               Edit
                           </a>
-                          <a class="btn btn-danger btn-sm" href="#">
+                          <a class="btn btn-danger btn-sm" href="delete_manu.php?id=<?php echo $value['manu_id']; ?>">
                               <i class="fas fa-trash">
                               </i>
                               Delete
@@ -121,6 +122,6 @@ $getAllmanufacture = $manufacture->getAllmanufacture();
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
- 
-  <?php include "footerproducts.html"; ?>
+ <?php include "footer.html"; ?>
+  <?php //include "footerproducts.html"; ?>
   

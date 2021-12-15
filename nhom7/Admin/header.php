@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,6 +48,10 @@
       <li class="nav-item d-none d-sm-inline-block">
         <a href="#" class="nav-link">Contact</a>
       </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="../logout.php" class="nav-link">Log out</a>
+      </li>
+     
     </ul>
 
     <!-- Right navbar links -->
@@ -57,19 +62,30 @@
           <i class="fas fa-search"></i>
         </a>
         <div class="navbar-search-block">
-          <form class="form-inline">
+        
+        
+         
+          <form   class="form-inline">
+            
             <div class="input-group input-group-sm">
-              <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+              <input class="form-control form-control-navbar" name="nam" type="search" placeholder="Search" aria-label="Search">
               <div class="input-group-append">
-                <button class="btn btn-navbar" type="submit">
+               
+                <button class="btn btn-navbar"  name ="submit" type="submit">
                   <i class="fas fa-search"></i>
                 </button>
+              
                 <button class="btn btn-navbar" type="button" data-widget="navbar-search">
                   <i class="fas fa-times"></i>
                 </button>
               </div>
             </div>
+           
           </form>
+         
+       
+        
+        
         </div>
       </li>
 
@@ -214,10 +230,11 @@
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
-                <i class="right fas fa-angle-left"></i>
+                <i class="right fas fa-angle"></i>
               </p>
             </a>
 </li>
+
 
               <li class="nav-item">
                 <a href="./products.php" class="nav-link ">
@@ -226,9 +243,9 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./protype.php" class="nav-link">
+                <a href="./protypes.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>manufacture(Protype)</p>
+                  <p>Protype</p>
                 </a>
               </li>
               <li class="nav-item">

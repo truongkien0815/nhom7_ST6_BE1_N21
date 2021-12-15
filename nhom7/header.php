@@ -61,6 +61,7 @@ $protype = new Protype;
 					<ul class="header-links pull-right">
 						<li><a href="#"><i class="fa fa-dollar"></i> USD</a></li>
 						<li><a href="#"><i class="fa fa-user-o"></i> My Account</a></li>
+						<li><a href="logout.php"><i class="fa fa-user-o"></i> Log out</a></li>
 					</ul>
 				</div>
 			</div>
@@ -185,7 +186,7 @@ $protype = new Protype;
 					<ul class="main-nav nav navbar-nav">
 						<li class="active"><a href="index.php">Home</a></li>
 					
-						<li><a href="#">Hot Deals</a></li>
+					
 						<?php 
 						$getAllProtype = $protype->getAllProtype();
 						foreach($getAllProtype as $value): 

@@ -220,6 +220,23 @@
             </a>
         
           </li>
+          
+              <li class="nav-item">
+                <a href="../Admin/manufacture.php" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>manufacture</p>
+                </a>
+              </li>
+          <li class="nav-item">
+            <a href="../Admin/addproduct.php" class="nav-link">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+               Add product
+                <i class="right fas fa-angle"></i>
+              </p>
+            </a>
+           
+          </li>
          
       
       
