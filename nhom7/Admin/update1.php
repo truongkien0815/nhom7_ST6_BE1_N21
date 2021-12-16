@@ -17,7 +17,7 @@ $manu = new Manufacture;
     $name=$_POST['name'];
     $price = $_POST['price'];
     $image =$_POST['image'];
-    $protype = $_POST['protype'];
+    $protype = $_POST['type'];
     $manu =$_POST['manu'];
    
    if( $product->updateProduct($name,$price,$image,$protype,$manu,$_GET['id']))

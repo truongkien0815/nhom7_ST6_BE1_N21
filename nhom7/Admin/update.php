@@ -48,6 +48,7 @@ require "models/manufactures.php";
                 <input type="text" name ='name' id="inputName" class="form-control">
               </div>
              
+             
           
               <div class="form-group">
                 <label for="inputStatus">manufacture</label>
@@ -66,10 +67,9 @@ require "models/manufactures.php";
                 </select>
                 
               </div>
-
               <div class="form-group">
                 <label for="inputStatus">protype</label>
-                <select id="inputStatus" class="form-control custom-select" name="protype">
+                <select id="inputStatus" class="form-control custom-select" name="type">
                   <?php $Procduct= new Protype(); 
                 $getProtype= $Procduct->getAllProtype();
                    ?>
@@ -82,7 +82,8 @@ require "models/manufactures.php";
                 </option>
                   <?php }?>
                 </select>
-                              </div>
+                
+              </div>
 
 
                       <?php /*        <div class="form-group">
