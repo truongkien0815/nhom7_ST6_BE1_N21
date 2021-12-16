@@ -37,6 +37,8 @@ $protype = new Protype;
         <th>Description</th>
        
 		<th>Action</th>
+		<th>Action 2</th>
+
        
 	</tr>
 <?php 
@@ -73,12 +75,13 @@ $protype = new Protype;
                                 <td><?php echo $qty ?></td>
                              
 
-                             <td><img width ="80px" src="./img/<?php echo $value['image'];?>" alt=""></td> 
-                                <td><?php echo $value['price']; ?></td>
+                             <td><img width ="70px" src="./img/<?php echo $value['image'];?>" alt=""></td> 
+                                <td width ="120px"><?php echo number_format($value['price']); ?> VND</td>
                                 <td><?php echo $value['description']; ?></td>
                                      <?php } ?>
                                  <?php } ?>  
-                                 <td><a href='del.php?id=<?php echo $key; ?>'>Delete đơn hàng </a></td>
+                                 <td><a href='del2.php?id=<?php echo $key; ?>'>Delete dơn hàng </a></td>
+                                 <td><a href='del.php?id=<?php echo $key; ?>'>Delete 1 cái </a></td>
                                  <?php // id = $key hoặc vali['id'] cx dc ?>
                              </tr>
                              <?php 

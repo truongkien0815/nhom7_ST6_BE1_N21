@@ -3,8 +3,8 @@
     if(isset($_GET['id']))
     $id =$_GET['id'];
     {
-  //unset($_SESSION['cart'][$id]) ;
-  $_SESSION['cart'][$id]--;
+  unset($_SESSION['cart'][$id]) ;
+  
     }
     header('location:addcart.php');
   
