@@ -1,12 +1,40 @@
 <?php
+
+
+
+
+
+?>
+
+<?php
+session_start();
+
+
 require "config.php";
 require "models/db.php";
 require "models/product.php";
+
+require "models/user.php";
+
 $product = new Product;
 require "models/protype.php";
 $getAllProducts = $product->getAllProducts();
 $protype = new Protype;
+$users = new User;
 
+if(isset($_POST['submit']))
+{
+$user = $_POST['username'];
+$pass = $_POST['password'];
+$passcheck =md5($pass);
+if($user =="admin" && $users->checkLogIn($user,$passcheck))
+//if($users->checkLogIn($user,$pass))
+{
+    $_SESSION['user']= $user;
+    echo "thành công:";
+}
+
+}
 //var_dump($getAllProducts);
 ?>
 
@@ -54,12 +82,13 @@ $protype = new Protype;
 			<div id="top-header">
 				<div class="container">
 					<ul class="header-links pull-left">
-						<li><a href="#"><i class="fa fa-phone"></i> +021-95-51-84</a></li>
-						<li><a href="#"><i class="fa fa-envelope-o"></i> email@email.com</a></li>
+						<li><a href="#"><i class="fa fa-phone"></i> 0815686825</a></li>
+						<li><a href="#"><i class="fa fa-envelope-o"></i>truongkien0815@gmail.com</a></li>
 						<li><a href="#"><i class="fa fa-map-marker"></i> 1734 Stonecoal Road</a></li>
 					</ul>
 					<ul class="header-links pull-right">
 						<li><a href="#"><i class="fa fa-dollar"></i> USD</a></li>
+					
 						<li><a href="#"><i class="fa fa-user-o"></i> My Account</a></li>
 						<li><a href="logout.php"><i class="fa fa-user-o"></i> Log out</a></li>
 					</ul>
