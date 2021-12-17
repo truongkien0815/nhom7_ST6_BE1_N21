@@ -22,6 +22,10 @@ public function checkLogIn($user,$password)
    //return an array
  
 }
+public function hienthi()
+{
+    
+}
 public function dangky($idname,$namep,$passs,$roleid)
 {
     $pass=md5($passs);

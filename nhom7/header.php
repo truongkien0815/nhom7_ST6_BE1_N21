@@ -22,19 +22,9 @@ $getAllProducts = $product->getAllProducts();
 $protype = new Protype;
 $users = new User;
 
-if(isset($_POST['submit']))
-{
-$user = $_POST['username'];
-$pass = $_POST['password'];
-$passcheck =md5($pass);
-if($user =="admin" && $users->checkLogIn($user,$passcheck))
-//if($users->checkLogIn($user,$pass))
-{
-    $_SESSION['user']= $user;
-    echo "thành công:";
-}
 
-}
+
+
 //var_dump($getAllProducts);
 ?>
 

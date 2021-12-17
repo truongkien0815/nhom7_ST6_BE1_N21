@@ -28,14 +28,14 @@ $protype = new Protype;
     <h1>Your cart</h1>
     <table border="1" cellspacing="0" cellpadding="5">
 	<tr>
-		<th>id</th>
+    <th>id</th>
 		<th>Name</th>
 		<th>Quantity</th>
         <th>Image</th>
 		<th>Price</th>
         
         <th>Description</th>
-       
+       <th> Thêm đơn hàng</th>
 		<th>Action</th>
 		<th>Action 2</th>
 
@@ -80,6 +80,8 @@ $protype = new Protype;
                                 <td><?php echo $value['description']; ?></td>
                                      <?php } ?>
                                  <?php } ?>  
+                                 <td><a href=''>thêm số lượng dơn hàng </a></td>
+                              
                                  <td><a href='del2.php?id=<?php echo $key; ?>'>Delete dơn hàng </a></td>
                                  <td><a href='del.php?id=<?php echo $key; ?>'>Delete 1 cái </a></td>
                                  <?php // id = $key hoặc vali['id'] cx dc ?>
