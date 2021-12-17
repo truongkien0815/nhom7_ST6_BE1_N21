@@ -64,7 +64,7 @@ require "models/manufactures.php";
               <div class="form-group">
                 <label for="inputName">type_id</label>
              
-                <input type="text" name="type_id" id="" class="form-control">
+                <input type="number" name="type_id" id="" class="form-control">
               </div>
              
               <div class="form-group">

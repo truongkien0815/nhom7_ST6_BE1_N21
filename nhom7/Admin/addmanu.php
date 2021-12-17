@@ -54,8 +54,8 @@ require "models/manufactures.php";
             <div class="card-body">
               <div class="form-group">
                 <label for="inputName">Manufacture_Id</label>
-             
-                <input type="text" name="manu_id" id="" class="form-control">
+             <input type="number" name="manu_id" id="" class="form-control">
+          
               </div>
              
               <div class="form-group">
