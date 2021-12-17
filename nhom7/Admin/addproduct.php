@@ -48,7 +48,8 @@ require "models/manufactures.php";
               </div>
               <div class="form-group">
                 <label for="inputDescription">Project Description</label>
-                <textarea id="inputDescription" class="form-control" rows="4"></textarea>
+                
+                <textarea id="summernote" class="form-control" rows="4"></textarea>
               </div>
               <div class="form-group">
                 <label for="inputStatus">protype</label>
