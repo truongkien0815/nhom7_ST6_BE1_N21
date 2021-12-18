@@ -26,12 +26,12 @@ public function hienthi()
 {
     
 }
-public function dangky($idname,$namep,$passs,$roleid)
+public function dangky($namep,$passs)
 {
     $pass=md5($passs);
-    $sql = self::$connection->prepare("insert into user(user_id,user_name,password1,role_id) values(?,?,?,?)");
+    $sql = self::$connection->prepare("insert into user(user_name,password1) values(?,?)");
   
-        $sql->bind_param("issi", $idname,$namep,$pass,$roleid);
+        $sql->bind_param("ss", $namep,$pass);
        
     return $sql->execute();
 

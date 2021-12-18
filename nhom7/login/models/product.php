@@ -53,7 +53,7 @@ public function search($keyword)
         $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
         return $items; //return an array
     }
-    //
+    
     public function get3ProductsByType($type_id, $page, $perPage)
     {
         // Tính số thứ tự trang bắt đầu

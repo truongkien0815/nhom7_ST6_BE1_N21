@@ -37,29 +37,33 @@
 			<div class="card-body">
 			<form action="dangky.php" method="post">
 				
-			<label for="">ID</label>
-						<input type="number" name="id" id="">
-					
-					<br>
-					<label for="">Name</label>
-						<input type="text" name="name1" id="">
+			<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-user"></i></span>
+						</div>
 						
-					<br>
-				<label for="">Password</label>
-						<input type="password" name="pass" id="">
-					
+						<input type="text" name="name1" class="form-control" placeholder="username">
+					</div>
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-key"></i></span>
+						</div>
+						<input type="password" name="pass" class="form-control" placeholder="password">
+					</div>
+			
 				
-				<br>
-				<label for="">role_ID</label>
-						<input type="number" name="role" id="">
+			
 					
 				
 					
 					<div class="form-group">
 					<input type="submit" name="submit" value="Sign Up">
-					
 					</div>
-				</form>
+					<br>
+					<br>
+					
+					<button><a href="index.php">Cancel</a></button>
+					
 			</div>
 			<div class="card-footer">
 				<div class="d-flex justify-content-center links">

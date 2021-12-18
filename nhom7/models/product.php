@@ -2,12 +2,28 @@
 <?php
 class Product extends Db
 {
-public function getAllProducts()
+public function getAllProducts_moinhat()
 {
-    $sql = self::$connection->prepare("SELECT * FROM products");
+    $sql = self::$connection->prepare("SELECT * FROM products ORDER BY id DESC LIMIT 0,10");
+    
+
     // Thực thi câu truy vấn 
     $sql->execute(); //return an object
     $items = array();
+
+    // dùng fetch_all để chuyển đối tượng thành mảng assoc
+    $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
+    return $items; //return an array
+}
+public function getAllProducts()
+{
+    $sql = self::$connection->prepare("SELECT * FROM products ");
+    
+
+    // Thực thi câu truy vấn 
+    $sql->execute(); //return an object
+    $items = array();
+
     // dùng fetch_all để chuyển đối tượng thành mảng assoc
     $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
     return $items; //return an array

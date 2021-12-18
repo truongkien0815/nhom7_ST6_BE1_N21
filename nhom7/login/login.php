@@ -13,9 +13,11 @@ if(isset($_POST['submit']))
 $user = $_POST['username'];
 $pass = $_POST['password'];
 $passcheck =md5($pass);
-if($user =="admin" && $users->checkLogIn($user,$passcheck))
+if($user == "admin" && $users->checkLogIn($user,$passcheck))
 //if($users->checkLogIn($user,$pass))
+
 {
+  
    
     $_SESSION['user']= $user;
     echo "thành công:";
@@ -24,14 +26,18 @@ if($user =="admin" && $users->checkLogIn($user,$passcheck))
 }
 elseif($user !="admin" && $users->checkLogIn($user,$passcheck))
 {
+  $_SESSION['user']= $user;
   echo "thành công khách hang";
   header('location:../index.php');
+  
+ 
+  
 }
 else
 {
   echo "không thanh công:";
  
- // header('location:index.php');
+  header('location:index.php');
 }
 
 }

@@ -10,18 +10,19 @@ $users = new User;
 if(isset($_POST['submit']))
 {
 
-$user_id = $_POST['id'];
+
 $user_name = $_POST['name1'];
 $pass = $_POST['pass'];
-$role = $_POST['role'];
 
 
 
-if( $users->dangky($user_id,$user_name,$pass,$role))
+
+if( $users->dangky($user_name,$pass))
 {
    
    
     echo "thành công";
+    header('location:index.php');
     
    
 }

@@ -87,12 +87,13 @@ include "header.php";
 									<div class="products-slick" data-nav="#slick-nav-1">
 										<?php foreach($getAllProducts as $value) : ?>
 										<!-- product -->
-										<div class="product">
+										<div class="product"><a href="product2.php?id=<?php echo $value['id']; ?>">
 											<div class="product-img">
 												<img src="./img/<?php  echo $value['image'] ?>" alt="">
 												<div class="product-label">
 													<span class="sale">-30%</span>
 													<span class="new">NEW</span>
+													
 												</div>
 											</div>
 											<div class="product-body">
@@ -111,16 +112,18 @@ include "header.php";
 													<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>
 													<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>
 												</div>
+												
 											</div>
 											<div class="add-to-cart">
 											
 												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> <a href="product2.php?id=<?php echo $value['id']; ?>">add to cart</a></button>
 											</div>
+											</a>
 										</div>
 										<!-- /product -->
 										<?php endforeach ?>
 
-	
+										
 									</div>
 									<div id="slick-nav-1" class="products-slick-nav"></div>
 								</div>
