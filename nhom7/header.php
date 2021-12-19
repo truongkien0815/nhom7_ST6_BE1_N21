@@ -69,12 +69,12 @@ $users = new User;
 					
 					<li><a href="#"><i class="fa fa-phone"></i> <?php echo $_SESSION['user']; ?> </a></li>
 						<li><a href="#"><i class="fa fa-phone"></i> 0815686825  </a></li>
-						<li><a href="#"><i class="fa fa-envelope-o"></i>truongkien0815@gmail.com</a></li>
-						<li><a href="#"><i class="fa fa-map-marker"></i> 1734 Stonecoal Road</a></li>
+						<li><a href="#"><i class="fa fa-envelope-o"></i> <?php echo $_SESSION['user'] . "0815@gmail.com"; ?></a></li>
+						<li><a href="#"><i class="fa fa-map-marker"></i> Quang Binh City</a></li>
 						
 					</ul>
 					<ul class="header-links pull-right">
-						<li><a href="#"><i class="fa fa-dollar"></i> USD</a></li>
+						<li><a href="#"><i class="fa fa-dollar"></i> VND</a></li>
 					
 						<li><a href="#"><i class="fa fa-user-o"></i> My Account</a></li>
 						<li><a href="logout.php"><i class="fa fa-user-o"></i> Log out</a></li>

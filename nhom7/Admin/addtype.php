@@ -11,10 +11,10 @@ $manu = new Manufacture;
 $protype = new Protype;
 if(isset($_GET['submit']))
 {
-   $id = $_GET['type_id'];
+  
    $name = $_GET['type_name'];
 
- if($protype->add($id,$name))
+ if($protype->add($name))
  {
      echo "Thanh coong";
      header('location:protypes.php');

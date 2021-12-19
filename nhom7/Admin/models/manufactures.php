@@ -11,10 +11,10 @@ public function getAllmanufacture()
     $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
     return $items; //return an array
 }
-public function addmanufacture($manu_id,$manu_name)
+public function addmanufacture($manu_name)
 {
-    $sql = self::$connection->prepare("insert into manufactures(manu_id,manu_name) values(?,?)");
-    $sql->bind_param("is",$manu_id,$manu_name);
+    $sql = self::$connection->prepare("insert into manufactures(manu_name) values(?)");
+    $sql->bind_param("s",$manu_name);
     return $sql->execute();
 }
 public function deletemanu($id)

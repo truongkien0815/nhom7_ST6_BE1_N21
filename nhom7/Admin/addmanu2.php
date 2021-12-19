@@ -11,10 +11,10 @@ $manu = new Manufacture;
 $protype = new Protype;
 if(isset($_POST['submit']))
 {
-   $id = $_POST['manu_id'];
+  
    $name = $_POST['manu_name'];
 
- if($manu->addmanufacture($id,$name))
+ if($manu->addmanufacture($name))
  
      echo "Thanh cong";
      header('location:manufacture.php');

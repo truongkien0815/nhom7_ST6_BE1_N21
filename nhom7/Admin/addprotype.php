@@ -33,12 +33,12 @@ require "models/manufactures.php";
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Project Edit</h1>
+            <h1>Protype Add</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Manufacture Edit</li>
+              <li class="breadcrumb-item active">Protype Add</li>
             </ol>
           </div>
         </div>
@@ -61,11 +61,6 @@ require "models/manufactures.php";
             </div>
             <form action="addtype.php" method="GET">
             <div class="card-body">
-              <div class="form-group">
-                <label for="inputName">type_id</label>
-             
-                <input type="number" name="type_id" id="" class="form-control">
-              </div>
              
               <div class="form-group">
 

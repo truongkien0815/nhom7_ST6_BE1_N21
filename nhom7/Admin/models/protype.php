@@ -28,13 +28,13 @@ public function updateprotype($name,$id)
  return $sql->execute();
 }
 
-public function add($type_id,$type_name)
+public function add($type_name)
 {
     
-    $sql = self::$connection->prepare("insert into protypes(type_id,type_name) 
-     values(?,?)");
+    $sql = self::$connection->prepare("insert into protypes(type_name) 
+     values(?)");
      
-    $sql->bind_param("is",$type_id,$type_name);
+    $sql->bind_param("s",$type_name);
     //var_dump($sql);
     return $sql->execute();
 }
