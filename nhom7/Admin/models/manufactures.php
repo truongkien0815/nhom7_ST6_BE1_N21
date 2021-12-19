@@ -3,7 +3,7 @@ class Manufacture extends Db
 {
 public function getAllmanufacture()
 {
-    $sql = self::$connection->prepare("SELECT * FROM manufactures");
+    $sql = self::$connection->prepare("SELECT * FROM manufactures order by manu_id desc");
     // Thực thi câu truy vấn 
     $sql->execute(); //return an object
     $items = array();
