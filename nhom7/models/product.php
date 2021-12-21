@@ -58,12 +58,25 @@ public function getProductschose()
     $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
     return $items; //return an array
 }
-public function search($keyword)
+public function search_all($keyword)
     {
+       
         $sql = self::$connection->prepare("SELECT * FROM products 
         WHERE `name` LIKE ?");
         $keyword = "%$keyword%";
         $sql->bind_param("s", $keyword);
+        $sql->execute(); //return an object
+        $items = array();
+        $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
+        return $items; //return an array
+    }
+public function search($keyword,$page,$perPage)
+    {
+        $firstLink = ($page - 1) * $perPage;
+        $sql = self::$connection->prepare("SELECT * FROM products 
+        WHERE `name` LIKE ? Limit ?,?");
+        $keyword = "%$keyword%";
+        $sql->bind_param("sii", $keyword,$firstLink,$perPage);
         $sql->execute(); //return an object
         $items = array();
         $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);

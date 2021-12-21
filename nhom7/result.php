@@ -244,7 +244,17 @@
 						<?php 
 							if(isset($_GET['keywork'])): 
 								$keyword=$_GET['keywork'];
-							$search = $product->search($keyword);
+											
+								$search_all = $product->search_all($keyword);	
+								$perPage = 3; 
+						// Lấy số trang trên thanh địa chỉ
+				$page = isset($_GET['page'])?$_GET['page']:1; 			
+				// Tính tổng số dòng, ví dụ kết quả là 18
+				$total = count($search_all); 					
+				// lấy đường dẫn đến file hiện hành
+				$url = $_SERVER['PHP_SELF']."?keywork=".$keyword;
+		
+							$search = $product->search($keyword,$page, $perPage);
 					foreach($search as $value):
 							
 							?>
@@ -286,39 +296,19 @@
 							</div>
 							<?php
 							endforeach;
-							 endif ?>
+						endif;
+							 ?>
 							
 							<!-- /product -->
 
 							<!-- product -->
 							<div class="col-md-4 col-xs-6">
-								<div class="product">
-									<div class="product-img">
-										<img src="./img/product02.png" alt="">
-										<div class="product-label">
-											<span class="new">NEW</span>
-										</div>
+							<div class="product">
+									
+									
+										
 									</div>
-									<div class="product-body">
-										<p class="product-category">Category</p>
-										<h3 class="product-name"><a href="#">product name goes here</a></h3>
-										<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
-										<div class="product-rating">
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star-o"></i>
-										</div>
-										<div class="product-btns">
-											<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>
-											<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>
-											<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>
-										</div>
-									</div>
-									<div class="add-to-cart">
-										<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i><a href="product2.php?id=<?php echo $value['id']; ?>"> add to cart</a></button>
-									</div>
+									
 								</div>
 							</div>
 							<!-- /product -->
@@ -327,16 +317,15 @@
 
 						<!-- store bottom filter -->
 						<div class="store-filter clearfix">
-							<span class="store-qty">Showing 20-100 products</span>
+							
 							<ul class="store-pagination">
-								<li class="active">1</li>
-								<li><a href="#">2</a></li>
-								<li><a href="#">3</a></li>
-								<li><a href="#">4</a></li>
+								<?php echo $product->paginate($url, $total, $perPage,$page); ?>
 								<li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+								
 							</ul>
 						</div>
 						<!-- /store bottom filter -->
+						
 					</div>
 					<!-- /STORE -->
 				</div>
