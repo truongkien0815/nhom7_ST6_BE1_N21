@@ -26,6 +26,7 @@ if($user == "admin" && $users->checkLogIn($user,$passcheck))
 }
 elseif($user !="admin" && $users->checkLogIn($user,$passcheck))
 {
+  
   $_SESSION['user']= $user;
   echo "thành công khách hang";
   header('location:../index.php');

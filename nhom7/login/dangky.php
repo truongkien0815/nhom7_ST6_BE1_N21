@@ -13,11 +13,13 @@ if(isset($_POST['submit']))
 
 $user_name = $_POST['name1'];
 $pass = $_POST['pass'];
+$sdt = $_POST['soDT'];
+$gmail = $_POST['gmail'];
 
 
 
 
-if( $users->dangky($user_name,$pass))
+if( $users->dangky($user_name,$pass,$sdt,$gmail))
 {
    
    

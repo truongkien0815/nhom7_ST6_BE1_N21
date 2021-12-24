@@ -269,6 +269,12 @@
                   <p>ADD product</p>
                 </a>
               </li>
+              <li class="nav-item">
+                <a href="./user1.php" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>User</p>
+                </a>
+              </li>
               
             </ul>
             </li>

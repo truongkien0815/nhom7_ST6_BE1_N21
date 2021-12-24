@@ -70,11 +70,11 @@ $users = new User;
 					<li><a href="#"><i class="fa fa-user-o"></i> <?php if(isset($_SESSION['user'])){echo $_SESSION['user']; }
 					else
 					{
-						echo "Sản phẩm";
+						echo "Người dùng";
 					}
 					
 					?> </a></li>
-						<li><a href="#"><i class="fa fa-phone"></i> 0815686825  </a></li>
+						<li><a href="#"><i class="fa fa-phone"></i>815686825 </a></li>
 						<li><a href="#"><i class="fa fa-envelope-o"></i> <?php if(isset($_SESSION['user'])){ echo $_SESSION['user'] . "0815@gmail.com";}
 						else
 						{
