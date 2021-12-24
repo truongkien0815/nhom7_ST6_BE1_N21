@@ -67,9 +67,21 @@ $users = new User;
 				
 					<ul class="header-links pull-left">
 					
-					<li><a href="#"><i class="fa fa-user-o"></i> <?php echo $_SESSION['user']; ?> </a></li>
+					<li><a href="#"><i class="fa fa-user-o"></i> <?php if(isset($_SESSION['user'])){echo $_SESSION['user']; }
+					else
+					{
+						echo "Sản phẩm";
+					}
+					
+					?> </a></li>
 						<li><a href="#"><i class="fa fa-phone"></i> 0815686825  </a></li>
-						<li><a href="#"><i class="fa fa-envelope-o"></i> <?php echo $_SESSION['user'] . "0815@gmail.com"; ?></a></li>
+						<li><a href="#"><i class="fa fa-envelope-o"></i> <?php if(isset($_SESSION['user'])){ echo $_SESSION['user'] . "0815@gmail.com";}
+						else
+						{
+							echo "name@gmail.com";
+						}
+						
+						?></a></li>
 						<li><a href="#"><i class="fa fa-map-marker"></i> Quang Binh City</a></li>
 						
 					</ul>

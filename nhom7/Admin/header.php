@@ -207,7 +207,12 @@
         </div>
         <div class="info">
       <!--  <a href="#" class="d-block">Alexander Pierce  </a> -->
-          <a href="#" class="d-block"><?php echo $_SESSION['user']; ?></a>
+          <a href="#" class="d-block"><?php if(isset($_SESSION['user'])){ echo $_SESSION['user']; }
+          else
+          {
+            echo "Quản lý sản phẩm";
+          }
+          ?></a>
         
         </div>
       </div>

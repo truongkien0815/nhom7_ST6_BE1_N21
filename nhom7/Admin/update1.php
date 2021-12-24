@@ -19,7 +19,7 @@ $manu = new Manufacture;
     $image =$_POST['image'];
     $protype = $_POST['type'];
     $manu =$_POST['manu'];
-   
+    
    if( $product->updateProduct($name,$price,$image,$protype,$manu,$_GET['id']))
    {
     echo "thêm thành cong";

@@ -49,7 +49,7 @@ require "models/manufactures.php";
               <div class="form-group">
                 <label for="inputDescription">Project Description</label>
                 
-                <textarea id="summernote" class="form-control" rows="4"></textarea>
+                <textarea id="summernote" name ="desc" class="form-control" rows="4"></textarea>
               </div>
               <div class="form-group">
                 <label for="inputStatus">protype</label>
@@ -85,11 +85,13 @@ require "models/manufactures.php";
                 </select>
                 
               </div>
-             
-              <div class="form-group">
+             <?php
+            /*  <div class="form-group">
                 <label for="inputClientCompany">description</label>
                 <input type="text" name ='desc'  id="inputClientCompany" class="form-control">
               </div>
+              */
+              ?>
               <div class="form-group">
                 <label for="inputClientCompany">Price</label>
                 <input type="text" name = "price" id="inputClientCompany" class="form-control">
@@ -120,4 +122,17 @@ require "models/manufactures.php";
   </div>
   <!-- /.content-wrapper -->
 
+ 
   <?php include "footer.html" ?>
+  <script>
+        $(function() {
+            // Summernote
+            $('#summernote').summernote()
+
+            // CodeMirror
+            CodeMirror.fromTextArea(document.getElementById("codeMirrorDemo"), {
+                mode: "htmlmixed",
+                theme: "monokai"
+            });
+        })
+    </script>

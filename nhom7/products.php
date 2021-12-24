@@ -255,7 +255,7 @@
 						<div class="row">
 							<!-- product -->
 							<div class="col-md-4 col-xs-6">
-								<div class="product">
+								<div class="product"><a href="product2.php?id=<?php echo $value['id']; ?>">
 									<div class="product-img">
 										<img src="./img/<?php echo $value['image'] ;?>" alt="">
 										<div class="product-label">
@@ -285,6 +285,8 @@
 										<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i><a href="product2.php?id=<?php echo $value['id']; ?>">add to cart</a></button>
 									</div>
 								</div>
+							
+						</a>
 							</div>
 							<!-- /product -->
 							<?php endforeach;
