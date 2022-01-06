@@ -30,6 +30,19 @@ class Product extends Db
     
     return $sql->execute(); //return an array
     }
+
+    public function getProduct()
+    {
+    $sql = self::$connection->prepare("SELECT * FROM products ");
+    
+    // Thực thi câu truy vấn 
+    $sql->execute(); //return an object
+    $items = array();
+    // dùng fetch_all để chuyển đối tượng thành mảng assoc
+    $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
+    return $items; //return an array
+}
+
     public function getAllProducts()
     {
     $sql = self::$connection->prepare("SELECT * FROM products
